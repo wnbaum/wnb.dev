@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Carousel, CarouselItem } from "svelte-vertical-carousel";
+	import { Carousel } from "svelte-vertical-carousel";
+	import { CarouselItem as CI } from "svelte-vertical-carousel";
 
 	import Rain from "../components/Rain.svelte";
 
@@ -10,13 +11,17 @@
 <main class="main">
 	<Rain />
 	<Carousel maxWidth={"1000px"} tiltFix={0.5}>
-		<CarouselItem height={200}>
+		<CI height={200}>
 			<Title />
-		</CarouselItem>
-		<CarouselItem height={100} />
-		<CarouselItem height={200}>
+		</CI>
+		<CI height={100} />
+		<CI height={200}>
 			<Description />
-		</CarouselItem>
+		</CI>
+		<CI height={100} />
+		<CI>
+			Hey! I am a sophomore at NYU pursuing a joint major in Computer Science and Math and a minor in Economics. I am passionate about software development, systems design, and anything computer programming. I work on many projects like websites and video games in my free time.
+		</CI>
 	</Carousel>
 </main>
 
@@ -24,5 +29,6 @@
 	.main {
 		width: 100vw;
 		height: 100vh;
+		color: white;
 	}
 </style>
