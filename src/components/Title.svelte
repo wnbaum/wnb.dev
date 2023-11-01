@@ -11,7 +11,7 @@
 	}
 
 	let finalName = "WILLBAUMGARTNER"
-	let name = 		"_______________"
+	let name = 		"               "
 
 	const delay = (ms: number) => new Promise(res => setTimeout(res, ms))
 
