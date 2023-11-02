@@ -63,7 +63,7 @@
 
 	.type {
 		font-size: min(10vw, 16px);
-		letter-spacing: 8px;
+		letter-spacing: min(1vw, 6px);
 		margin-bottom: 10px;
 	}
 
