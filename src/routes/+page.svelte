@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+
 	import { Carousel } from "svelte-vertical-carousel";
 	import { CarouselItem as CI } from "svelte-vertical-carousel";
 
@@ -6,23 +8,60 @@
 
 	import Title from "../components/Title.svelte";
 	import Description from "../components/Description.svelte";
+	import Arrows from "../components/Arrows.svelte";
+    import Will from "../components/Will.svelte";
+
+	let showCarousel: boolean = false;
+	let showArrows: boolean = false;
+	let scrollProgression: number = 0;
+
+	$: if (scrollProgression > 0 && showArrows) {
+		showArrows = false;
+	} 
+	
+	const delay = (ms: number) => new Promise(res => setTimeout(res, ms))
+
+	async function waitForScroll() {
+		await delay(6000);
+		showArrows = true;
+	}
+
+	async function start() {
+		await delay(100);
+		showCarousel = true;
+	}
+
+	onMount(() => {
+		start();
+		waitForScroll();
+	})
 </script>
 
 <main class="main">
 	<Rain />
-	<Carousel maxWidth={"1000px"} tiltFix={0.5}>
-		<CI height={200}>
-			<Title />
-		</CI>
-		<CI height={100} />
-		<CI height={200}>
-			<Description />
-		</CI>
-		<CI height={100} />
-		<CI>
-			Hey! I am a sophomore at NYU pursuing a joint major in Computer Science and Math and a minor in Economics. I am passionate about software development, systems design, and anything computer programming. I work on many projects like websites and video games in my free time.
-		</CI>
-	</Carousel>
+	<div class="container" style="opacity: {showCarousel ? 1 : 0}">
+		<Carousel maxWidth={"1000px"} tiltFix={1} margin={50} bind:scrollProgression={scrollProgression} >
+			<CI height={200}>
+				<Title />
+			</CI>
+			<CI height={150}>
+				<Arrows show={showArrows}/>
+			</CI>
+			<CI height={150} />
+			<CI height={200}>
+				<Description />
+			</CI>
+			<CI height={50} />
+			<CI>
+				<div class="flex">
+					<p>
+						Hey! I am a sophomore at NYU pursuing a double major in Computer Science with Honors and Math and a minor in Finance. I am passionate about software development, systems design, and anything computer programming. I work on many projects like websites and video games in my free time.
+					</p>
+					<Will />
+				</div>
+			</CI>
+		</Carousel>
+	</div>
 </main>
 
 <style>
@@ -30,5 +69,21 @@
 		width: 100vw;
 		height: 100vh;
 		color: white;
+	}
+
+	.container {
+		width: 100%;
+		height: 100%;
+		transition: opacity 3s ease-in-out;
+	}
+
+	.flex {
+		display: flex;
+	}
+
+	@media (max-width: 500px) {
+		.flex {
+			flex-direction: column-reverse;
+		}
 	}
 </style>

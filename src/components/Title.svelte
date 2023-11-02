@@ -11,7 +11,7 @@
 	}
 
 	let finalName = "WILLBAUMGARTNER"
-	let name = 		"               "
+	let name = 		"WILL BAUMGARTNER"
 
 	const delay = (ms: number) => new Promise(res => setTimeout(res, ms))
 
@@ -19,8 +19,25 @@
 	let waitDelay: number = 3000;
 
 	async function generate() {
+		await delay(3000)
 		while (true) {
 			let idx = 0;
+
+			while (idx <= finalName.length) {
+				for (let i = 0; i < 2; i++) {
+					let random = "";
+					for (let j = 0; j < idx; j++) {
+						random += randomLetter();
+					}
+					random += finalName.substring(idx);
+					name = random;
+					name = name.slice(0, 4) + " " + name.slice(4);
+					await delay(swapDelay);
+				}
+				idx++;
+			}
+
+			idx = 0;
 
 			while (idx <= finalName.length) {
 				for (let i = 0; i < 2; i++) {
@@ -36,21 +53,6 @@
 			}
 			
 			await delay(waitDelay);
-
-			idx = 0;
-			while (idx <= finalName.length) {
-				for (let i = 0; i < 2; i++) {
-					let random = "";
-					for (let j = 0; j < idx; j++) {
-						random += randomLetter();
-					}
-					random += finalName.substring(idx);
-					name = random;
-					name = name.slice(0, 4) + " " + name.slice(4);
-					await delay(swapDelay);
-				}
-				idx++;
-			}
 		}
 	}
 

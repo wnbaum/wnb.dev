@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-vertical-carousel": "^0.0.5"
+		"svelte-vertical-carousel": "^0.0.6",
+		"vanilla-tilt-svelte": "^1.0.4"
 	}
 }
