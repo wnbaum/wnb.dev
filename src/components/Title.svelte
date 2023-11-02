@@ -79,7 +79,7 @@
 		text-align: center;
 		font-family: "Source Code Pro", monospace;
 		font-weight: 400;
-		font-size: min(60px, 6vw);
+		font-size: min(55px, 6vw);
 		background: linear-gradient(270deg,#a0e9ff 10%,#a162e8 40%,#f093b0 55%,#edca85 94%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;

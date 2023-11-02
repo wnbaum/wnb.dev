@@ -52,8 +52,6 @@
 
 <main class="main">
 	I am <span class="desc" bind:this={desc}></span><span class="cursor" bind:this={cursor}></span>
-
-
 </main>
 
 <style>
