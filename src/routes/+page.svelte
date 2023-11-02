@@ -52,13 +52,22 @@
 				<Description />
 			</CI>
 			<CI height={50} />
-			<CI>
+			<CI height={400}>
 				<div class="flex">
 					<p>
 						Hey! I am a sophomore at NYU pursuing a double major in Computer Science with Honors and Math and a minor in Finance. I am passionate about software development, systems design, and anything computer programming. I work on many projects like websites and video games in my free time.
 					</p>
-					<Will />
+					<!-- <Will /> -->
 				</div>
+			</CI>
+			<CI height={200}>
+				<h1>SKILLS</h1>
+			</CI>
+			<CI height={200}>
+				<h1>PROJECTS</h1>
+			</CI>
+			<CI height={200}>
+				<h1>CONTACT</h1>
 			</CI>
 		</Carousel>
 	</div>
@@ -81,9 +90,15 @@
 		display: flex;
 	}
 
-	@media (max-width: 500px) {
+	h1 {
+		font-size: min(60px, 7vw);
+		font-weight: 200;
+		letter-spacing: 1.5vw;
+	}
+
+	/* @media (max-width: 500px) {
 		.flex {
 			flex-direction: column-reverse;
 		}
-	}
+	} */
 </style>
