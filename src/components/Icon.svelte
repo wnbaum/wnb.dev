@@ -26,6 +26,6 @@
 		margin-top: 10px;
 		width: min(100px, 12vw);
 		text-align: center;
-		font-size: 14px;
+		font-size: 2vw;
 	}
 </style>

@@ -12,7 +12,6 @@
 		perspective: 2000,
 		speed: 2000
 	}}>
-		<!-- <div class="bbg"></div> -->
 		<div class="bg"></div>
 		<img class="will" src={will} alt="Me!">
 	</div>
@@ -35,13 +34,6 @@
 		pointer-events: none;
 	}
 
-	.bbg {
-		position: absolute;
-		width: calc(300px + 2*var(--p));
-		height: calc(400px + 2*var(--p));
-		background: black;
-	}
-
 	.bg {
 		position: absolute;
 		width: calc(300px + 2*var(--p));
@@ -54,5 +46,11 @@
 	}
 	.bg:hover {
 		opacity: 1;
+	}
+
+	@media (max-width: 600px) {
+		.card {
+			pointer-events: none;
+		}
 	}
 </style>

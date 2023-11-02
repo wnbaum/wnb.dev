@@ -68,7 +68,7 @@
 	}
 
 	.title {
-		font-size: min(20vw, 40px);
+		font-size: min(10vw, 30px);
 		letter-spacing: 0;
 	}
 
@@ -94,6 +94,10 @@
 		.text {
 			flex-basis: 200px;
 			height: 200px;
+		}
+
+		.desc {
+			font-size: 14px;
 		}
 	}
 </style>
