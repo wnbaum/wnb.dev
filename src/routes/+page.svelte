@@ -64,7 +64,7 @@
 	<Rain />
 	<div class="container" style="opacity: {showCarousel ? 1 : 0}">
 		<Carousel maxWidth={"1000px"} tiltFix={1} margin={50} bind:scrollProgression={scrollProgression} >
-			<CI height={200}>
+			<CI height={100}>
 				<Title />
 			</CI>
 			<CI height={150}>
