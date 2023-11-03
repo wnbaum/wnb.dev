@@ -6,6 +6,7 @@ interface Project {
 }
 
 import droneResearch from "./assets/projectimages/drone-research.jpg";
+import tanks from "./assets/projectimages/tanks.jpg";
 import tess from "./assets/projectimages/tess.jpg";
 import psr from "./assets/projectimages/robot.jpg";
 import fragShader from "./assets/projectimages/fragshader.jpg";
@@ -24,6 +25,12 @@ let projects: Project[] = [
 		type: "Research",
 		desc: "Training Neural Networks with a Genetic Algorithm for Obstacle Avoidance in Simulated Autonomous Drones",
 		image: droneResearch
+	},
+	{
+		title: "Tricky Tanks",
+		type: "iOS App",
+		desc: "Low-latency multiplayer mobile game in the Godot",
+		image: tanks
 	},
 	{
 		title: "Exoplanet Classification Model",
