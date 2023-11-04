@@ -20,6 +20,7 @@
 	import CSIcon from "../assets/icons/cs.svg"
 	import JSIcon from "../assets/icons/js.svg"
 	import TSIcon from "../assets/icons/ts.svg"
+	import MATLABIcon from "../assets/icons/matlab.svg"
 
 	import NodeIcon from "../assets/icons/node.svg"
 	import ExpressIcon from "../assets/icons/express.svg"
@@ -91,9 +92,9 @@
 			<CI height={150}>
 				<h1>SKILLS</h1>
 			</CI>
-			<CI height={200}>
+			<CI height={300}>
 				<h2>LANGUAGES</h2>
-				<div class="grid" style="grid-template-columns: repeat(7, 1fr);">
+				<div class="grid" style="grid-template-columns: repeat(4, 1fr);">
 					<Icon img={CPPIcon} text={"C++"}/>
 					<Icon img={CSIcon} text={"C#"}/>
 					<Icon img={CIcon} text={"C"}/>
@@ -101,9 +102,10 @@
 					<Icon img={PythonIcon} text={"Python"}/>
 					<Icon img={JSIcon} text={"JavaScript"}/>
 					<Icon img={TSIcon} text={"TypeScript"}/>
+					<Icon img={MATLABIcon} text={"MATLAB"}/>
 				</div>
 			</CI>
-			<CI height={50} />
+			<CI height={200} />
 			<CI height={200}>
 				<h2>FRAMEWORKS AND LIBRARIES</h2>
 				<div class="grid" style="grid-template-columns: repeat(4, 1fr);">
@@ -113,7 +115,7 @@
 					<Icon img={ReactIcon} text={"React"}/>
 				</div>
 			</CI>
-			<CI height={50} />
+			<CI height={150} />
 			<CI height={200}>
 				<h2>TOOLS</h2>
 				<div class="grid" style="grid-template-columns: repeat(5, 1fr);">
@@ -185,6 +187,7 @@
 
 	.grid {
 		display: grid;
+		row-gap: 40px;
 		/* column-gap: 100px; */
 	}
 
@@ -198,6 +201,7 @@
 		font-size: min(30px, 4vw);
 		font-weight: 200;
 		letter-spacing: 0.5vw;
+		margin-bottom: 40px;
 	}
 
 	.email {

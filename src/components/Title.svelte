@@ -84,11 +84,12 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		user-select: none;
-		letter-spacing: 1.5vw;
+		letter-spacing: min(28px, 1.5vw);
 	}
 
 	.bg {
-		letter-spacing: 1.5vw;
+		letter-spacing: min(28px, 1.5vw);
+		font-size: min(55px, 6vw);
 		font-weight: 800;
 		animation: pulsate 0.1s alternate infinite ease-in-out;
 	}
