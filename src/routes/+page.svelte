@@ -80,7 +80,7 @@
 				<div class="flex">
 					<div>
 						<p class="bio">
-							Hey! I am a sophomore at NYU pursuing a double major in Computer Science with Honors and Math and a minor in Finance. I am passionate about software development, systems design, and anything computer programming. I work on many projects like websites and video games in my free time.
+							Hey! I am a student at NYU pursuing a joint major in Computer Science/Mathematics with Honors and a minor in Finance. I am passionate about software development, systems design, and anything computer programming. I work on many projects like websites and video games in my free time.
 						</p>
 					</div>
 					<div style="margin: auto;">
